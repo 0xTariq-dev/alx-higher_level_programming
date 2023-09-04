@@ -10,6 +10,9 @@ int check_cycle(listint_t *list)
 {
 	listint_t *current, *new;
 
+	if (!line)
+		return (0);
+
 	current = list;
 	new = list->next;
 
