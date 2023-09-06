@@ -2,6 +2,7 @@
 import os
 import py_compile
 
+os.environ['PYFILE'] = 'main.py'
 py_file = os.environ['PYFILE']
 pyc_file = py_file + 'c'
 py_compile.compile(py_file, cfile=pyc_file)
