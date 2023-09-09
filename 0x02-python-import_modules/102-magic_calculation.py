@@ -7,6 +7,6 @@ def magic_calculation(a, b):
         c = add(a, b)
         for i in range(4, 6):
             add(c, i)
-            return c
+        return c
     if a >= b:
         return sub(a, b)
