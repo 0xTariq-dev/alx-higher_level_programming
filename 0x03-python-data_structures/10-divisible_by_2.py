@@ -4,6 +4,6 @@ def divisible_by_2(my_list=[]):
     for i in range(len(my_list)):
         if my_list[i] % 2 == 0:
             check_list[i] = True
-        else: 
+        else:
             check_list[i] = False
     return check_list
