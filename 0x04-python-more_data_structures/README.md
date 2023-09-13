@@ -1,1 +1,1 @@
-# ALX SE <Python more data structure> project.
+# ALX SE [Python more data structure] project.
