@@ -5,7 +5,7 @@
 
 class Square:
     """Square:
-        Private instance attribute: size
+        Private instance attribute: size, position.
         """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -49,7 +49,7 @@ class Square:
         '''
         try:
             if isinstance(value, tuple) and len(value) == 2 and
-                value[0] >= 0 and value[1] >= 0:
+            value[0] >= 0 and value[1] >= 0:
                 self.__position = value
             else:
                 raise TypeError
