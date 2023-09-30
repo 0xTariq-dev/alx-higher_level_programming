@@ -20,6 +20,7 @@ class Square:
 
     @property
     def size(self):
+        '''The getter method of size instantation'''
         return self.__size
 
     @size.setter
@@ -38,6 +39,7 @@ class Square:
 
     @property
     def position(self):
+        '''The getter method of position instantation'''
         return self.__position
 
     @position.setter
