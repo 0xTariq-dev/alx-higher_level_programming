@@ -9,7 +9,6 @@ class Rectangle:
         an area.
     """
 
-
     def __init__(self, width=0, height=0):
         ''' Instantiation method of rectangle class
         Args:
@@ -22,7 +21,7 @@ class Rectangle:
     @property
     def width(self):
         ''' Property of the width value
-        
+
         Args:
             value: The width value.
             width must be an integer and greater than or equal to zero.
@@ -43,7 +42,7 @@ class Rectangle:
     @property
     def height(self):
         ''' Property of the height value
-        
+
         Args:
             value: The height value.
             height must be an integer and greater than or equal to zero.
