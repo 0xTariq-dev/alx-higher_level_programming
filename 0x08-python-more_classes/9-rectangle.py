@@ -95,6 +95,12 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        cls.__width = size
-        cls.__height = size
-        return cls(cls.__width, cls.__height)
+        """Class method that defines a square
+
+        Args:
+            size (int): The size of square
+
+        Returns: 
+            size = height = size
+        """
+        return cls(size, size)
