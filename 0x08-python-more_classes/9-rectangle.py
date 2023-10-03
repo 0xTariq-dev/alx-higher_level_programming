@@ -100,7 +100,7 @@ class Rectangle:
         Args:
             size (int): The size of square
 
-        Returns: 
+        Returns:
             size = height = size
         """
         return cls(size, size)
