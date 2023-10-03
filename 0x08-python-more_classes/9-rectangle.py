@@ -101,6 +101,6 @@ class Rectangle:
             size (int): The size of square
 
         Returns:
-            size = height = size
+            width = height = size
         """
         return cls(size, size)
