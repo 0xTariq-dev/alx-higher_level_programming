@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""3-Rectangle Module: A module that defines rectangle"""
+"""4-Rectangle Module: A module that defines rectangle"""
 
 
 class Rectangle:
@@ -67,3 +67,8 @@ class Rectangle:
             if i != self.__height - 1:
                 rep.append("\n")
         return (''.join(rep))
+
+    def __repr__(self):
+        """Returns a string representation of the rectangle
+            to be able to recreate a new instance"""
+        return f'Rectangle({self.width}, {self.height})'
