@@ -1,0 +1,55 @@
+The ``0-add_integer`` module
+======================
+
+This module defines a method add_integer that adds it's two arguments(int or float)
+The function will fail if:
+	1- types passed is not int or float.
+
+Using ``add_integer``
+-------------------
+
+```add_integer(...)``` return the addition
+
+First import ``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(-83)
+    15
+
+    >>> add_integer(11.0, -2)
+    9
+
+    >>> add_integer(-8, 2000)
+    1992
+
+    >>> add_integer(-2000.5, 2000)
+    0
+
+    >>> add_integer(0, 0)
+    0
+
+    >>> add_integer(-0, )
+    98
+
+    >>> add_integer("hi", 8)
+    Traceback (most recent call last):
+		...
+    TypeError: a must be an integer
+
+    >>> add_integer(6, "hi")
+    Traceback (most recent call last):
+		...
+    TypeError: b must be an integer
+
+    >>> add_integer((2, 4), 8)
+    Traceback (most recent call last):
+		...
+    TypeError: a must be an integer
+
+    >>> add_integer([2, 4], 8)
+    Traceback (most recent call last):
+		...
+    TypeError: a must be an integer

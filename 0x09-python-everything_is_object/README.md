@@ -1,1 +1,1 @@
-# ALX SE [Python More Classes and Objects] project.
+# ALX SE [Python Everything Is Object] project.
