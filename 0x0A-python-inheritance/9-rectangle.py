@@ -26,5 +26,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """Defins the print() and str() methods behavior"""
-        return "[" + str(self.__class__.__name__) + "]" \
+        description = "[" + str(self.__class__.__name__) + "]" \
             + str(self.__width) + "/" + str(self.__height)
+        return description
