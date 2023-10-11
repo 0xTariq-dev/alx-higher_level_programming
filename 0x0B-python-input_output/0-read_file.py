@@ -8,4 +8,4 @@ def read_file(filename=""):
         filename (filestream): The file name to open.
     """
     with open(filename, mode='r', encoding='UTF8') as f:
-       print(f.read(), end='')
+        print(f.read(), end='')
