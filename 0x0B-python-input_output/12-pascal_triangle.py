@@ -21,5 +21,3 @@ def pascal_triangle(n):
         temp.append(1)
         pascal.append(temp)
     return pascal
-
-
