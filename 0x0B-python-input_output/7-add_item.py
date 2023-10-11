@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines load_from_json_file method"""
+"""Add all arguments passed to list and save in a JSON file. """
 import sys
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
