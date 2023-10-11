@@ -3,8 +3,8 @@
 
 
 def append_write(filename="", text=""):
-    """Appends a text to the end of file encoded in 'UTF8' and returns the number
-        of characters added.
+    """Appends a text to the end of file encoded in 'UTF8' and returns the
+        number of characters added.
     Args:
         filename (filestream): The file name to open.
         text (string): The string to write to the file.
