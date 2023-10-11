@@ -2,10 +2,11 @@
 """Defines to_json_string method"""
 import json
 
+
 def to_json_string(my_obj):
     """Serialize an obj as JSON string.
     Args:
-        obj: The obj to Serialize.
+        my_obj: The object to Serialize.
     Returns:
         The JSON representation of object.
     """
