@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-"""Defines Base Class"""
+"""Defines Base Model"""
 
 
 class Base:
+    """Base class
+
+    The Base Class for all classes in this package
+
+    private class attribute:
+        __nb_object (int): Counter for the instances of the class.
+    """
 
     __nb_objects = 0  # Number of objects insatatiated from the class.
 
