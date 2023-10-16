@@ -4,11 +4,11 @@
 
 class Base:
 
-    __nb_objects = 0 #Number of objects insatatiated from the class.
+    __nb_objects = 0  # Number of objects insatatiated from the class.
 
     def __init__(self, id=None):
         """Instatiation Method
-        
+
         Args:
             id (int)(optional): The id of the instance.
         """
