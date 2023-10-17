@@ -1,0 +1,93 @@
+The ``2-matrix_divided`` module
+======================
+
+This module defines a method matrix_devided that divides all elements of a matrix rounded to 2 decimal places.
+The function will fail if:
+	1- matrix isn't a list of lists of integers or floats.
+	2- rows of the matrix differs in size.
+	3- divisor isn't a number.
+	4- divisor is 0.
+
+Using ``matrix_divided``
+-------------------
+
+```matrix_divided(matrix, div)``` return the divided matrix.
+
+First import ``matrix_divided`` from the ``2-matrix_divided`` module:
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+
+    >>> matrix = [[100, 500], [20, 70]]
+    >>> matrix_divided(matrix, 10)
+    [[10.0, 50.0], [2.0, 7.0]]
+
+    >>> matrix = [[25, 55], [1010, 800]]
+    >>> matrix_divided(matrix, 5)
+    [[5.0, 11.0], [202.0, 160.0]]
+
+    >>> matrix = [[49, 456], [762, 53]]
+    >>> matrix_divided(matrix, 6)
+    [[8.17, 76.0], [127.0, 8.83]]
+
+    >>> matrix = [[49, 456, 6563], [762, 53]]
+    >>> matrix_divided(matrix, 6)
+    Traceback (most recent call last):
+		...
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix = [[], [762, 53]]
+    >>> matrix_divided(matrix, 6)
+    Traceback (most recent call last):
+		...
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix = [[], [762, 53]]
+    >>> matrix_divided(matrix, 5)
+    Traceback (most recent call last):
+		...
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix = [762, 53]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+		...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[762, 53], ['str', 'x']]
+    >>> matrix_divided(matrix, 7)
+    Traceback (most recent call last):
+		...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = "Hello, matrix"
+    >>> matrix_divided(matrix, 7)
+    Traceback (most recent call last):
+		...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = 213545
+    >>> matrix_divided(matrix, 4)
+    Traceback (most recent call last):
+		...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix = [[500, 645], [762, 53]]
+    >>> matrix_divided(matrix, "x")
+    Traceback (most recent call last):
+		...
+    TypeError: div must be a number
+
+    >>> matrix = [[500, 645], [762, 53]]
+    >>> matrix_divided(matrix, True)
+    Traceback (most recent call last):
+		...
+    TypeError: div must be a number
+
+    >>> matrix = [[500, 645], [762, 53]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+		...
+    ZeroDivisionError: division by zero
+
