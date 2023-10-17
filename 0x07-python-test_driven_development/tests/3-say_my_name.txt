@@ -1,0 +1,38 @@
+The ``3-say_my_name`` module
+======================
+
+This model defines a method say_my_name that prints the name representation
+as the message "My name is <first name> <last name>".
+The function will fail if:
+	1- first name or last name is not strings.
+
+Using ``say_my_name``
+-------------------
+
+```matrix_divided(first_name, last_name)``` return the divided matrix.
+```last_name is an optional argument```
+
+First import ``say_my_name`` from the ``3-say_my_name`` model:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+    >>> say_my_name(12)
+    Traceback (most recent call last):
+		...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Bob", True)
+    Traceback (most recent call last):
+		...
+    TypeError: last_name must be a string
