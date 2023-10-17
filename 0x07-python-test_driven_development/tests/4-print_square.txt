@@ -1,0 +1,71 @@
+The ``4-print_square`` model
+======================
+
+This model defines a method print_square that prints square representation.
+The function will fail if:
+	1- size is an integer.
+	2- size is less than zero.
+	3- size is a float and is less than zero.
+
+Using ``print_square``
+-------------------
+
+```print_square(size)``` prints the square.
+
+First import ``print_square`` from the ``4-print_square`` model:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Now use it:
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    >>> print_square(1)
+    #
+
+    >>> print_square("str")
+    Traceback (most recent call last):
+		...
+    TypeError: size must be an integer
+
+    >>> print_square([4])
+    Traceback (most recent call last):
+		...
+    TypeError: size must be an integer
+
+    >>> print_square((5, 20))
+    Traceback (most recent call last):
+		...
+    TypeError: size must be an integer
+
+    >>> print_square({20})
+    Traceback (most recent call last):
+		...
+    TypeError: size must be an integer
+
+    >>> print_square(-5)
+    Traceback (most recent call last):
+		...
+    ValueError: size must be >= 0
+
+    >>> print_square(-5.565)
+    Traceback (most recent call last):
+		...
+    TypeError: size must be an integer
+
