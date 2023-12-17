@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script to fetch all sts from states table."""
+"""Script to fetch the first state from states table."""
 
 import sys
 from model_state import Base, State
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     mk_session = sessionmaker(bind=engine)
     session = mk_session()
     first = session.query(State).first()
-    print(first.id, first.name, sep=': ')
+    print(first.id, first.name, sep=': ') if first else 'Nothing'
