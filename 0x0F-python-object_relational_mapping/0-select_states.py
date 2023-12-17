@@ -9,6 +9,9 @@ if __name__ == '__main__':
                                 passwd=argv[2], db=argv[3])
 
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states;")
+    cur.execute("SELECT * FROM states")
+    rows = cur.fetchall()
     states = [row for row in cur.fetchall()]
     print(*states, sep='\n')
+    cur.close()
+    conn.close()
