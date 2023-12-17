@@ -15,4 +15,4 @@ if __name__ == "__main__":
     states = [f"{st.id}: {st.name}" for st
               in session.query(State)
               .filter(State.id, State.name.contains("%a%"))]
-    print('\n'.join(states))
+    print('\n'.join(states)) if states else print('Nothing')

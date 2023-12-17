@@ -14,4 +14,4 @@ if __name__ == "__main__":
     session = mk_session()
     states = [f'{st.id}: {st.name}' for st in
               session.query(State).order_by(State.id)]
-    print('\n'.join(states))
+    print('\n'.join(states)) if states else print('Nothing')
