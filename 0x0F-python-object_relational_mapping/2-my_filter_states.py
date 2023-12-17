@@ -9,7 +9,8 @@ if __name__ == '__main__':
                                 passwd=argv[2], db=argv[3])
 
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}';".format(argv[4]))
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
+                .format(argv[4]))
     states = cur.fetchall()
     print(*states, sep='\n') if states else 'Nothing'
     cur.close()
