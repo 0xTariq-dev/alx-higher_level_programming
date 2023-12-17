@@ -13,5 +13,7 @@ if __name__ == '__main__':
                 FROM cities\
                 LEFT JOIN states\
                 ON cities.state_id = states.id;")
-    cities = [row for row in cur.fetchall()]
-    print(*cities, sep='\n')
+    cities = cur.fetchall()
+    print(*cities, sep='\n') if cities else 'Nothing'
+    cur.close()
+    conn.close()
