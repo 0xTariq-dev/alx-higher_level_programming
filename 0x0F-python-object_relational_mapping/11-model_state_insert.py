@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script to fetch the state from states table that matches the name given."""
+"""Script to add state 'Louisiana' to states table"""
 
 from sys import argv
 from model_state import Base, State
@@ -12,8 +12,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     mk_session = sessionmaker(bind=engine)
     session = mk_session()
-    match = session.query(State).filter(State.name == (argv[4],))
-    try:
-        print(match[0].id)
-    except IndexError:
-        print('Not found')
+    new = State(name='Louisiana')
+    session.add(new)
+    session.commit()
+    print(new.id)
