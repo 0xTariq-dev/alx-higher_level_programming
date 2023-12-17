@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script to changes the name of a State object."""
+"""Script to add state 'Louisiana' to states table"""
 
 from sys import argv
 from model_state import Base, State
@@ -12,5 +12,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     mk_session = sessionmaker(bind=engine)
     session = mk_session()
-    session.query(State).filter(State.id == 2).update({'name': 'New Mexico'})
+    session.query(State).filter(State.name.contains('a')).delete()
     session.commit()
