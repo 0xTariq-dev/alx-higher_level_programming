@@ -10,5 +10,8 @@ if __name__ == '__main__':
 
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE name REGEXP '^N';")
-    states = [row for row in cur.fetchall()]
-    print(*states, sep='\n')
+    states = cur.fetchall()
+    for row in states:
+        print(row)
+    cur.close()
+    conn.close()
