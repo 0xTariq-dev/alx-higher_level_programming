@@ -12,6 +12,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     mk_session = sessionmaker(bind=engine)
     session = mk_session()
-    states = [f'{st.id}: {st.name}' for st in
-              session.query(State).order_by(State.id)]
-    print('\n'.join(states)) if states else print('Nothing')
+    for st in session.query(State).order_by(State.id):
+        print(st.id, st.name, sep=': ')
