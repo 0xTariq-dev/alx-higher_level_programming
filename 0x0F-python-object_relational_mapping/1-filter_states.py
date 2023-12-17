@@ -11,6 +11,6 @@ if __name__ == '__main__':
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'")
     states = cur.fetchall()
-    print(*states, sep='\n')
+    print(*states, sep='\n') if states else 'Nothing'
     cur.close()
     conn.close()
