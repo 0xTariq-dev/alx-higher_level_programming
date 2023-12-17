@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     cur = conn.cursor()
     cur.execute("SELECT * FROM states")
-    states = [row for row in cur.fetchall()]
+    states = cur.fetchall()
     print(*states, sep='\n')
     cur.close()
     conn.close()
