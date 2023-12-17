@@ -9,10 +9,10 @@ if __name__ == '__main__':
                                 passwd=argv[2], db=argv[3])
 
     cur = conn.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name\
-                FROM cities\
-                LEFT JOIN states\
-                ON cities.state_id = states.id;")
+    cur.execute("""SELECT cities.id, cities.name, states.name
+                FROM cities
+                LEFT JOIN states
+                ON states.id = cities.state_id""")
     cities = cur.fetchall()
     print(*cities, sep='\n') if cities else 'Nothing'
     cur.close()
