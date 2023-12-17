@@ -13,5 +13,6 @@ if __name__ == "__main__":
     mk_session = sessionmaker(bind=engine)
     session = mk_session()
     states = [f"{st.id}: {st.name}" for st
-              in session.query(State).filter(State.id, State.name.contains('a'))]
+              in session.query(State)
+              .filter(State.id, State.name.contains("%a%"))]
     print('\n'.join(states))
