@@ -13,4 +13,4 @@ if __name__ == "__main__":
     mk_session = sessionmaker(bind=engine)
     session = mk_session()
     first = session.query(State).first()
-    print(first.id, first.name, sep=': ') if first else 'Nothing'
+    print(first.id, first.name, sep=': ') if first else print('Nothing')
