@@ -15,5 +15,5 @@ if __name__ == "__main__":
     session = mk_session()
     for st in session.query(State).order_by(State.id):
         print(f"{st.id}: {st.name}")
-        for ct in session.query(City).filter(st.id == City.state_id):
-            print(f"\t{ct.id}: {ct.name}")
+        for ct in st.cities:
+            print(f"    {ct.id}: {ct.name}")
