@@ -39,3 +39,7 @@ The project directory is organized as follows:
     - 1-writeme.js
         A script that writes a string to a file.
         - Usage: `node 1-writeme.js <file path> <string to write>`
+    - 2-statuscode.js
+        A script that display the status code of a `GET` request.
+        - Usage: `node 2-statuscode.js <URL>`
+    
