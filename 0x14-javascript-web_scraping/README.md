@@ -36,3 +36,6 @@ The project directory is organized as follows:
     - 0-readme.js
         A script that reads and prints the content of a file.
         - Usage: `node 0-readme.js <file path>`
+    - 1-writeme.js
+        A script that writes a string to a file.
+        - Usage: `node 1-writeme.js <file path> <string to write>`
