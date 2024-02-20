@@ -42,4 +42,6 @@ The project directory is organized as follows:
     - 2-statuscode.js
         A script that display the status code of a `GET` request.
         - Usage: `node 2-statuscode.js <URL>`
-    
+    - 3-starwars_title.js
+        A script that prints the title of a Star Wars movie where the episode number matches a given integer.
+        - Usage: `node 3-starwars_title.js <episode number>`
