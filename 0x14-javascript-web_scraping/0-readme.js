@@ -5,10 +5,10 @@ const filePath = process.argv[2];
 const fs = require('fs');
 
 fs.open(filePath, 'r', (err, fd) => {
-    if (err) {
-        console.error(err);
-    } else {
-        console.log(fs.readFileSync(fd, 'utf8'));
-        fs.close(fd);
-    }
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(fs.readFileSync(fd, 'utf8'));
+    fs.close(fd);
+  }
 });
