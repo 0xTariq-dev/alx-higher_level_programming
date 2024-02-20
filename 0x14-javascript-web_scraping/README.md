@@ -48,3 +48,7 @@ The project directory is organized as follows:
     - 4-starwars_count.js
         A script that prints the number of movies where the character “Wedge Antilles” is present.
         - Usage: `node 4-starwars_count.js <URL>`
+    - 5-request_store.js
+        A script that gets the contents of a webpage and stores it in a file.
+        - Usage: `node 5-request_store.js <URL> <file path>`
+    
