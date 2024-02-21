@@ -51,4 +51,6 @@ The project directory is organized as follows:
     - 5-request_store.js
         A script that gets the contents of a webpage and stores it in a file.
         - Usage: `node 5-request_store.js <URL> <file path>`
-    
+    -6-completed_tasks.js
+        A script that computes the number of tasks completed by user id.
+        - Usage: `node 6-completed_tasks.js <URL>`
